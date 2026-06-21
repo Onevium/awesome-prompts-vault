@@ -11,7 +11,7 @@ source_url: https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE
 
 # Claude Fable 5 系统提示（提取版）
 
-> Anthropic Claude **Fable 5**（Claude 5 系列首款）的完整对外系统提示，约 **122,750 字符 / 1,585 行 / 27,000+ token**，由 [elder-plinius/CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S) 项目在发布约 24 小时内提取并公开。本目录收录**原文 + 拆解**，用于研究前沿模型如何组织系统提示。
+> Anthropic Claude **Fable 5**（Claude 5 系列首款）的完整对外系统提示，**122,750 字符 / 1,597 行 / 约 1.75 万词**（本仓库实测），由 [elder-plinius/CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S) 项目在发布约 24 小时内提取并公开。本目录收录**原文 + 拆解**，用于研究前沿模型如何组织系统提示。
 
 - 📄 原文：[`claude-fable-5-system-prompt.txt`](./claude-fable-5-system-prompt.txt)（122,750 字符，未删改）
 - 🔗 出处：[CL4R1T4S / ANTHROPIC / CLAUDE-FABLE-5.md](https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE-FABLE-5.md)（AGPL-3.0，~43k stars）
@@ -42,7 +42,7 @@ source_url: https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE
 
 ## 怎么用这份素材
 
-1. **当系统提示设计范本读** —— 看 Anthropic 如何分层组织 product info / 拒答策略 / 安全护栏 / 20+ 工具定义，照着学结构。
+1. **当系统提示设计范本读** —— 看 Anthropic 如何分层组织 product info / 拒答策略 / 安全护栏 / 工具定义，照着学结构。
 2. **写自己的 system prompt 时对照** —— 尤其是 Agent / Claude Agent SDK 项目，硬约束怎么前置、能力边界怎么显式声明。
 3. **想本地加载体验**（仅替换提示文本，不解锁任何东西）：
    ```bash
@@ -54,9 +54,9 @@ source_url: https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE
 
 这份系统提示值得学的可复用技巧：
 
-1. **分层模块化** —— `claude_behavior` 下按 product_information / refusals / child_safety / tone / formatting / wellbeing 切块，每块职责单一，便于维护和定位。
-2. **硬约束前置 + 强措辞** —— 不可妥协项（儿童安全、版权"单源引用 ≤15 词，否则标 SEVERE VIOLATION"）用最强语气写死并放在显眼位置，而不是埋在正文里。
-3. **能力边界逐项声明** —— memory / artifacts / MCP / computer-use / web search / 工具定义都给出**具体使用协议**，而非笼统授权，压缩模型自由发挥空间。
+1. **分层模块化** —— `claude_behavior` 下按 `product_information` / `refusal_handling` / `critical_child_safety_instructions` / `tone_and_formatting` / `user_wellbeing` / `knowledge_cutoff` 等真实 header 切块，每块职责单一，便于维护和定位。
+2. **硬约束前置 + 强措辞** —— 不可妥协项（儿童安全、版权"单源引用 15+ 词即 SEVERE VIOLATION、一源最多一引、默认改写"）用最强语气写死并放在显眼位置，而不是埋在正文里。
+3. **能力边界逐项声明** —— `memory_system` / `persistent_storage_for_artifacts` / `mcp_app_suggestions` / `computer_use` / `search_instructions` 各给出**具体使用协议**，而非笼统授权，压缩模型自由发挥空间。
 4. **口径集中统一** —— 型号、model string、知识截止（2026.1）、产品矩阵集中在 `product_information`，避免模型在不同对话里给出矛盾说法。
 
 ## 来源 · Sources

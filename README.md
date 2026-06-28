@@ -4,7 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
-[![Prompts](https://img.shields.io/badge/prompts-1-orange.svg)](#分类目录)
+[![Prompts](https://img.shields.io/badge/prompts-3-orange.svg)](#分类目录)
 
 **简体中文** · [English](./README.en.md)
 
@@ -25,8 +25,8 @@ prompts/<分类>/<slug>/
 | 分类 | 放什么 | 数量 |
 | --- | --- | --- |
 | [`system-prompts/`](./prompts/system-prompts/) | 完整系统提示，按来源（anthropic / openai / google / community） | **1** |
-| [`coding/`](./prompts/coding/) | 代码生成、审查、重构 | _0_ |
-| [`agent/`](./prompts/agent/) | Agent 循环、工具定义、多 agent 编排 | _0_ |
+| [`coding/`](./prompts/coding/) | 代码生成、审查、重构 | **1** |
+| [`agent/`](./prompts/agent/) | Agent 循环、工具定义、多 agent 编排 | **1** |
 | [`creative/`](./prompts/creative/) | 写作、设计、创意 | _0_ |
 | [`mine/`](./prompts/mine/) | 原创与改造版 | _0_ |
 
@@ -35,6 +35,8 @@ prompts/<分类>/<slug>/
 ### 🔥 精选
 
 - **[Claude Fable 5 系统提示（提取版）](./prompts/system-prompts/anthropic/claude-fable-5/)** —— 网传"破解版"的真相辨析 + 122,750 字符原文 + 结构拆解。读懂前沿模型怎么写系统提示。
+- **[Loop Engineering 循环工程章程](./prompts/agent/loop-engineering-charter/)** —— 让 Claude 自循环干到完工的可粘贴 charter + `/goal` `/loop` 用法。停止当那个"循环里的人"。
+- **[CLAUDE.md 编码六条铁律](./prompts/coding/llm-coding-rules-claude-md/)** —— 用命令式硬规则约束 AI 写代码的可预测错误，含正反代码对照。
 
 ## 每条笔记的结构
 

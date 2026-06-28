@@ -4,7 +4,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
-[![Prompts](https://img.shields.io/badge/prompts-1-orange.svg)](#catalog)
+[![Prompts](https://img.shields.io/badge/prompts-3-orange.svg)](#catalog)
 
 [简体中文](./README.md) · **English**
 
@@ -25,14 +25,16 @@ prompts/<category>/<slug>/
 | Category | What lives here | Count |
 | --- | --- | --- |
 | [`system-prompts/`](./prompts/system-prompts/) | Full system prompts, by source (anthropic / openai / google / community) | **1** |
-| [`coding/`](./prompts/coding/) | Code generation, review, refactor | _0_ |
-| [`agent/`](./prompts/agent/) | Agent loops, tool definitions, multi-agent orchestration | _0_ |
+| [`coding/`](./prompts/coding/) | Code generation, review, refactor | **1** |
+| [`agent/`](./prompts/agent/) | Agent loops, tool definitions, multi-agent orchestration | **1** |
 | [`creative/`](./prompts/creative/) | Writing, design, ideation | _0_ |
 | [`mine/`](./prompts/mine/) | Original and remixed prompts | _0_ |
 
 ### 🔥 Featured
 
 - **[Claude Fable 5 system prompt (extracted)](./prompts/system-prompts/anthropic/claude-fable-5/)** — debunking the "cracked version" myth + the full 122,750-char original + a structural breakdown.
+- **[Loop Engineering charter](./prompts/agent/loop-engineering-charter/)** — a paste-ready charter that makes Claude loop until the job is done, plus `/goal` & `/loop` usage. Stop being the human in the loop.
+- **[CLAUDE.md coding rules](./prompts/coding/llm-coding-rules-claude-md/)** — six imperative hard rules that curb the predictable mistakes LLMs make when writing code, with bad/good code contrasts.
 
 ## Anatomy of an entry
 

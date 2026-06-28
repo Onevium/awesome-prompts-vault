@@ -10,12 +10,16 @@ source_url: https://x.com/Raytar/status/2069212188619805179
 
 # Loop Engineering 循环工程章程
 
+![Stop being the loop —— /goal 干到完工，/loop 按节奏复跑，check 每轮自检，sleep 自己运行](./assets/cover-stop-being-the-loop.jpeg)
+
 > 把"你盯着 AI 一步步干活"变成"AI 自己循环干到完工"。一段可直接粘进 Claude Code 的**循环章程（charter）**，外加 `/goal`、`/loop` 两个命令的用法。核心一句：**prompting 是亲自做事，loop engineering 是管理那个干活的人。**
 
 - 🔗 出处：[@Raytar — "Stop Being the Loop"](https://x.com/Raytar/status/2069212188619805179)（X 长文，2026-06-23，1.4M 阅读）
 - 🔁 配套：和 [`coding/llm-coding-rules-claude-md`](../../coding/llm-coding-rules-claude-md/) 同源思路 —— 那个管"单次写代码的纪律"，这个管"让 Agent 自循环、可中断续跑"。
 
 ## 一个循环的五拍
+
+![How a loop works：1 Find the work → 2 Do it → 3 Check itself → 4 Remember → 5 Go again，循环往复直到没活](./assets/how-a-loop-works.jpeg)
 
 任何循环，再花哨，都是同样五拍：
 
@@ -27,7 +31,11 @@ source_url: https://x.com/Raytar/status/2069212188619805179
 
 > 和 cron 定时任务的本质区别：**循环里有个决策者**。cron 跑固定脚本、不思考；循环跑的是 Claude —— 它看当前局面、挑下一步、做、检查结果、再决定继续/重试/撤销/停止。
 
+![Scheduled task vs Loop：cron 是固定脚本、无决策；loop 跑的是 Claude，看局面后在 keep going / try again / undo / stop 之间决策](./assets/scheduled-task-vs-loop.jpeg)
+
 ## 两个命令
+
+![The two commands that run a loop：/goal 干到"这件事为真"自动停，/loop 按 30m 节奏反复跑](./assets/two-commands-goal-vs-loop.jpeg)
 
 ```
 # /goal —— 有终点线时用：干到"这件事为真"为止，每轮自检是否达标，达标自动停
